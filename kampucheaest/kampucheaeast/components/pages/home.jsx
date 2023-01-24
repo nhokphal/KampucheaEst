@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SingUp = () => {
+const Home = () => {
   return (
     <div>
-      
+    home
     </div>
   )
 }
 
-export default SingUp
+export default Home
