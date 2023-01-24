@@ -1,5 +1,6 @@
 import { Inter } from '@next/font/google'
 import About from './about'
+import Index from './Dashboard'
 import App from './_app'
 // import styles from '@/styles/Home.module.css'
 
@@ -9,7 +10,9 @@ export default function Home() {
   return (
     <>
      <main>
-     <h1>body</h1>
+
+    <Index/>
+
     </main>
     </>
   )

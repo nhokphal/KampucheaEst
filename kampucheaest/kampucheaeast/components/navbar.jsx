@@ -10,13 +10,13 @@ import Signup from './pages/signup';
 const Container = styled.div
 `
 display: flex;
+padding: 10px;
 justify-content: space-between;
 line-height: 16px;
 width: 1400px;
-background-color: red;
 height: 50px;
 left: 0px;
-top: 0px;
+overflow-y: hidden;
 `;
 
 
@@ -30,13 +30,13 @@ const Navbar = () => {
   return (
     <div>
        <Container>
-        <Home/>
-        <Wrapper>
-        <Contact/>
-        <About/>
-        <Service/>
-        </Wrapper>
-        <Signup/>
+          <Home/>
+          <Wrapper>
+            <Contact/>
+            <About/>
+            <Service/>
+          </Wrapper>
+          <Signup/>
        </Container> 
     </div>
   )
