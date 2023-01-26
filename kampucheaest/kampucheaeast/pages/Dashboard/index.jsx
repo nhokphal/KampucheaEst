@@ -8,7 +8,7 @@ const Container = styled.div
     display:flex;
 
 `;
-const Wrapper = styled.div
+const WrapperSignUp = styled.div
 `
     padding: 20px;
     margin: 30px;  
@@ -63,7 +63,7 @@ const ButtonCardWrapper = styled.div
 const Index = () => {
   return (
     <Container>
-        <Wrapper>
+        <WrapperSignUp>
         <Text>
         Your best Value <br/>Preposition
         </Text>
@@ -71,9 +71,8 @@ const Index = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua.
         </Paragraph>
-
-            </Wrapper>
-    <Wrapper>    
+            </WrapperSignUp>
+    <WrapperSignUp>    
             <BoardCard>
                 <ButtonCardWrapper>
                     <ButtonCard />    
@@ -81,7 +80,7 @@ const Index = () => {
                     <ButtonCard />    
                 </ButtonCardWrapper>
             </BoardCard>
-    </Wrapper>
+    </WrapperSignUp>
     </Container>
   )
 }
