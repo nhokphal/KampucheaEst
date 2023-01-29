@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import styled from 'styled-components'
 import About from './pages/about';
@@ -30,11 +31,18 @@ const Navbar = () => {
   return (
     <div>
        <Container>
+      
           <Home/>
           <Wrapper>
-            <Contact/>
+          <Link href="./contact">
+          <Contact/>
+          </Link>
+          <Link href="./about">
             <About/>
+          </Link>
+          <Link href="./service">
             <Service/>
+          </Link>
           </Wrapper>
           <Signup/>
        </Container> 

@@ -28,7 +28,6 @@ const Container = styled.div
   const TextLogo = styled.div
   `
   font-family: 'Roboto';
-  background-color: yellow;
   color: #000000;
   width: 5px;
   padding-top: 1px;
