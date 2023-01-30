@@ -16,7 +16,7 @@ const Text = styled.text
 `
     color: white;
     ${Button}:hover & {
-      color: red;
+      color: grey;
     }
 `;
 
