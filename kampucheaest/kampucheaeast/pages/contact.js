@@ -19,12 +19,7 @@ display: flex;
 // const CardWrapper = styled.div`
 // display: flex;
 // `;
-const ContactCard = styled.text`
-font-size: 20px;
-background-color: red;
-height: 20px;
-font-family: 'roboto';
-`;
+
 
 const Paragraph = styled.p`
 top: 10px;
@@ -41,9 +36,10 @@ const StyledForm = styled.form`
 `;
 
 const StyledLabel = styled.label`
+  margin: 10px;
   display: block;
   margin-bottom: 5px;
-  color: ${props => props.invalid ? 'red' : 'black'};
+  /* color: ${props => props.invalid ? 'red' : 'black'}; */
 
 `;
 
@@ -55,7 +51,6 @@ border-radius: 5px;
 
 `;
 const StyledInputEmail = styled.input`
-
 width: 100%;
 padding: 10px;
 padding: 10px sold #ccc;
@@ -63,27 +58,40 @@ border-radius: 5px;
 
 `;
 
+const Button = styled.button`
+  margin: 20px;
+  top: 20px;
+  height: 30px;
+  width: auto;
+  color: white;
+  border: 0.5px solid black;  
+  background-color: black;  
+
+`;
+
+const ContactCard = styled.text`
+font-size: 20px;
+height: 20px;
+font-family: 'roboto';
+margin: 30px;
+
+`;
+
+
 const Contact = () => {
   const [userName, setUserName] = react.useState('');
   const [email , setEmail] = react.useState('');
-  const [username, setUsername] = React.useState('');
   const [nameInvalid, setNameInvalid] = React.useState(false);
 
    
-    const handleSubmit = () => 
-    {
-      e.preventDefault();
-      if (userName.length < 8) {
-        setNameInvalid(true);
-      } 
-      return setNameInvalid(false);
-
-    }
-
-    const usernameEntered = (e) => {
-      setUsername(e.target.value);
-      // buttonEnabled(username, password)
-  }
+    const handleSubmit = (e) => 
+      {
+        e.preventDefault();
+        setUserName('');
+        setEmail('');
+        console.log('submitted')
+        // setUserName('');
+      }
    
   return (
     <Container>
@@ -93,11 +101,18 @@ const Contact = () => {
         <Paragraph>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       </Paragraph>
-      <StyledLabel invalid={setNameInvalid} >Name</StyledLabel>
-      <StyledInputName type="text" name="name" value={username} onChange={e => usernameEntered(e)}/>
-      <StyledLabel invalid={setNameInvalid} >Name</StyledLabel>
-      <StyledInputEmail type="text" name="email"value={email} onChange={e => usernameEntered(e)}/>
-    </ContactCard>
+      <form onSubmit={handleSubmit}> 
+          <StyledLabel htmlFor='name' >Name</StyledLabel>
+          <div>
+          <StyledInputName type="text" placeholder='name' name="name" value={userName} onChange={e => setUserName(e.target.value)}/>
+          <StyledLabel invalid={setNameInvalid} >Password</StyledLabel>
+          <StyledInputEmail type="text" placeholder='email' name="email" value={email} onChange={e => setEmail(e.target.value)}/>
+          </div>
+        {/* <StyledLabel invalid={setNameInvalid} >Name</StyledLabel> */}
+        {/* <StyledInputEmail type="text" name="email"value={email} onChange={e => usernameEntered(e)}/> */}
+        <Button type="submit" >Submit</Button>
+        </form>
+      </ContactCard>
     </Wrapper>
     </Container>
   )
